@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To Janelle</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #ffe6f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #d6336c;
+      margin-bottom: 20px;
+    }
+
+    #main-content {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    #photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    #message-box {
+      background: #fff0f5;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      font-size: 1.3em;
+      color: #a6004f;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    #login-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    input[type="password"] {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      width: 200px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff66a3;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-page">
+    <h1>Enter the Secret Passcode 💌</h1>
+	<p> Clue: It's A Yes </p>
+    <input type="password" id="passcode" placeholder="Enter passcode" />
+    <button onclick="checkPasscode()">Unlock</button>
+  </div>
+
+  <div id="main-content">
+    <h1> HAPPY 8TH MONTHSARY BABY!! ❤️</h1>
+    <div id="photo-gallery">
+      <img src="US1.jpg" class="photo" alt="Pic 1" />
+      <img src="US2.jpg" class="photo" alt="Pic 2" />
+      <img src="US3.jpg" class="photo" alt="Pic 3" />
+    </div>
+    <div id="message-box">
+      <p>HII BABY!, Happy 8th Monthsary to us, I know we've been through a lot of arguements and tampuhans, but we still managed to power through those and
+		here we are celebtrating our 8th Monthsary. I just want to say that I am very lucky to have you, Thank you for making me feel valued and Loved,
+		I'm excited to spend more months and years with you. I LOVE YOU JANELLE 💖</p>
+    </div>
+  </div>
+
+  <script>
+    function checkPasscode() {
+      const passcode = document.getElementById('passcode').value;
+      const correctPasscode = '8202024';
+
+      if (passcode === correctPasscode) {
+        document.getElementById('login-page').style.display = 'none';
+        document.getElementById('main-content').style.display = 'flex';
+        document.body.style.justifyContent = 'flex-start';
+      } else {
+        alert('Awit nakalimutan, haha sige ok lang malayo sa lungs');
+      }
+    }
+  </script>
+</body>
+</html>
